@@ -89,14 +89,47 @@
     <u></u> <!--aláhúzottá teszi a szöveget-->
     <span></span> <!--egyedileg szerkeszthetőek a szövegrészek, szavak-->
     <form action="">
-        <label for="vezeteknev">Vezeték név:</label> <!--Nevet , címet lehet beállítani-->
-        <input id="vezeteknev" type="text" placeholder="Kiss"> <!--beviteli mező, típusa szöveg; egyedi azonosító azért kell hogy a laber for részébe be tudjuk írni és ezzel összekapcsolhatjuk őket; a placeholder segítséget nyújt a felhasználónak, hogy mit és hogyan kell beírnia az adott mezőbe-->
-
+        <fieldset> <!--részekre bontható általa az űrlap, pl.: személyes adatok rész, szegélyt rak az adott rész köré-->
+            <legend>Személyes adatok</legend> <!--az adott rész címének beállítása-->
+            <label for="vezeteknev">Vezeték név:</label> <!--Nevet , címet lehet beállítani, elnevezés-->
+            <input id="vezeteknev" type="text" placeholder="Vezetéknév"> <!--beviteli mező, sokféle típus van, egyedi azonosítóval a label-lel összekapcsolható, a placeholderben beírt szöveg segítséget ad a felhasználónak az űrlap kitöltésében-->
+            <!--input type lehet:
+            - szöveg (text)
+            - jelölő négyzet (checkbox) - több választás lehetséges
+            - rádió gomb (radio) - egy választás lehetséges
+            - email cím (email)
+            - szám (number)
+            - dátum (date)
+            - jelszó (password)
+            - idő (time)
+            stb., DE én csak a fent leírtakat fogom kérdezni!!!-->
+        </fieldset>
+        <button type="button">GOMB</button> <!--gomb-->
+            <!--gombot kétféleképpen lehet hozzáadni a weboldalhoz:
+            1. input "tag" type=submit (Küldés), type=reset(Visszaállítás), type=button (sima gomb esemény nélkül)
+            Ha beállítunk value-t (értéket), akkor csak azt fogja kiírni a gombra, amennyiben ezt kihagyjuk a böngésző a saját erre alkalmazott beállítását fogja használni az általad használt operációs rendszer nyelvén.
+            2. button "tag" type=submit (Küldés), type=reset(Visszaállítás), type=button (sima gomb esemény nélkül)-->
+            <label for="auto">AUTÓK:</label>
+            <select name="auto" id="auto"> <!--lenyíló menüs választási lehetőség-->
+                <option value=""></option> <!--lenyíló menü eleme-->
+                <option value="">Audi</option>
+                <option value="">BMW</option>
+                <option value="">Ford</option>
+                <option value="">Fiat</option>
+            </select>
+            <label for="uzenet">Üzenet a szakácsnak:</label>
+            <textarea name="message" id="uzenet" cols="30" rows="10"></textarea> <!--szövegmező nagyobb terjedelmű szövegek írása esetén pl.: Üzenet a szakácsnak: Nem kérek rukkolát a pizzára!-->
         <!--W3Schools-ban szerkesztett verzió:-->
         <label for="vezeteknev">Vezeték név:</label>
         <input type="text" id="vezeteknev"><br>
         <label for="keresztnev">Kereszt név:</label>
         <input type="text" id="keresztnev"><br><br>
     </form> <!--űrlap készítéséhez használjuk-->
+    <nav></nav> <!--navigációs menü kialakítására való-->
+    <header></header> <!--fejléc a body-ban-->
+    <footer></footer> <!--lábléc a body-ban-->
+    <p>P<sub>2</sub></p> <!--alsó index-->
+    <p>m<sup>2</sup></p> <!--felső index-->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/TmosmihCQe8?si=Lxro6X_xFgmbWjs9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> <!--videókat lehet beilleszteni weboldalra-->
 </body>
 </html>
